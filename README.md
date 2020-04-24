@@ -1,1 +1,3 @@
-# kurasaiteja.github.io
+A CPU SCHEDULING VISUALIZER
+
+
