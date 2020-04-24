@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>CPU Scheduling Algorithm Visualization</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div>
+  <div>
+    <h1>Simulation</h1>
+    <form id="algorithm">
+      <input type="radio" name="algorithm" value="fcfs" checked/> FCFS
+      <input type="radio" name="algorithm" value="sjf" /> SJF
+      <input type="radio" name="algorithm" value="priority" /> Priority scheduling
+      <input type="radio" name="algorithm" value="robin" /> Round Robins
+    </form>
+    <br>
+  </div>
+  <table id="inputTable" >
+    <tr>
+      <th>Process</th>
+
+      <th>Burst Time</th>
+      <th class="servvtime">Waiting Time</th>
+      <th class="priority-only">Priority</th>
+      <th class="turnaroundtimet">Turn Around Time</th>
+
+    </tr>
+    <tr>
+      <td>P0</td>
+      <td><input class="initial exectime" name="bt" type="text" value="5" /></td>
+      <td name="wt" class="servtime"></td>
+      <td class="priority-only initial"><input type="text" /></td>
+      <td name="xt" class="turnaroundtime"></td>
+
+    </tr>
+    <tr>
+      <td>P1</td>
+      <td><input name="bt" class="initial exectime" value="3" /></td>
+      <td name="wt" class="servtime"></td>
+      <td class="priority-only"><input type="text" /></td>
+      <td name="xt" class="turnaroundtime"></td>
+    </tr>
+
+  </table>
+  <input id="minus" class="myButton" style="display: inline; left: 900px; position: absolute; top: 195px;" type="button" value="Delete row" onclick="deleteRow();" />
+</div>
+<div>
+<input type="button" class="myButton" value="Add" onclick="addRow();" />
+</div>
+<div>
+</div>
+<p id="quantumParagraph" hidden>Quantum:
+  <input style="width: 50px;" id="quantum" type="text" value="3" />
+</p>
+<input type="button" class="myButton" value="Go" onclick="draw();" />
+<br/><br/>
+
+<fresh>
+</fresh>
+<p>
+  Timer: <strong id="timer"></strong> sec
+</p>
+<p class="hey">
+  Average Waiting Time: <strong class="grdtotal"></strong>sec </br>
+  Average Turn Around Time: <strong class="gtotal"></strong>sec
+</p >
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
